@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Oct 13 15:42:42 2015
+Created on Sat Jan 18 18:02:53 2019
 
-@author: tfleck
+@author: pavoni
 """
 
 import testUtility
+import Dominion
 
 # Get player names
-player_names = ["*Annie", "*Ben", "*Carla"]
+player_names = ["Isaac", "*Ben"]
 numPlayers = len(player_names)
 
 # number of curses and victory cards
@@ -22,6 +23,8 @@ supply_order = testUtility.getSupplyOrder()
 
 # Pick 10 cards from box to be in the supply.
 supply = testUtility.makeSupply(box, numPlayers, nV, nC)
+
+supply["Province"] = [Dominion.Estate()] * nV
 
 # initialize the trash
 trash = []

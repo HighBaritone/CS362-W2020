@@ -1,3 +1,9 @@
+"""
+Created on Sat Jan 18 18:05:19 2019
+
+@author: pavoni
+"""
+
 import Dominion
 import random
 from collections import defaultdict

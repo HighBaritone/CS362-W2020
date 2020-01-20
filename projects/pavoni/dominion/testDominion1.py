@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Oct 13 15:42:42 2015
+Created on Sat Jan 18 18:02:51 2019
 
-@author: tfleck
+@author: pavoni
 """
 
 import testUtility
+import Dominion
 
 # Get player names
 player_names = ["Annie", "*Ben", "*Carla"]
@@ -19,6 +20,9 @@ nC = testUtility.getNumCurses(numPlayers)
 box = testUtility.getBox(nV)
 
 supply_order = testUtility.getSupplyOrder()
+
+supply_order[0].append('Province')
+supply_order[8] = []
 
 # Pick 10 cards from box to be in the supply.
 supply = testUtility.makeSupply(box, numPlayers, nV, nC)
